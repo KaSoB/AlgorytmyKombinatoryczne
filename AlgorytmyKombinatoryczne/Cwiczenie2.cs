@@ -5,25 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    class Cwiczenie2 {
-        public static void Task1() {
+    public class Cwiczenie2 {
+        public static void Task1(int n) {
             /*
             1.Napisz program generujący wszystkie podzbiory zbioru {1, 2, . . . , n} w kolejności zgodnej
             z ich liczebnością (najpierw zbiór pusty, potem zbiory 1-elementowe, następnie 2-elementowe
             itd.). Algorytm nie musi być efektywny! Wykorzystaj program z zadania 4 z poprzednich
             ćwiczeń.
             */
-            int n = int.Parse(Console.ReadLine());
+
+            foreach (var item in GenerateSubsets(n).OrderBy(y => y.Count())) {
+                Output.Subset(item);
+            }
+        }
+        public static List<int[]> GenerateSubsets(int n) {
             var values = Enumerable.Repeat(0, n).ToArray();
-            int i;
-
             var results = new List<int[]>();
-
+            int i;
             do {
                 i = n - 1;
 
                 results.Add(values.Select(
-                        (value, index) => new { Value = value, Index = index + 1 }).Where(x => x.Value != 0).Select(x => x.Index).ToArray());
+                        (value, index) => new { Value = value, Index = index + 1 })
+                        .Where(x => x.Value != 0)
+                        .Select(x => x.Index).ToArray());
+
                 while (i >= 0 && values[i] == 1) {
                     i--;
                 }
@@ -36,24 +42,18 @@ namespace AlgorytmyKombinatoryczne {
                 }
 
             } while (i >= 0);
-
-
-            foreach (var item in results.OrderBy(y => y.Count())) {
-                Console.WriteLine($"({string.Join(",", item)})");
-            }
+            return results;
         }
-        public static void Task2() {
+        public static void Task2(int n, int k) {
             /*
             2.Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości k zbudowane
             z liczb od 1 do n. Użyj algorytmu rekurencyjnego
             */
-            int n = int.Parse(Console.ReadLine());
-            int k = int.Parse(Console.ReadLine());
             GenerateTask2(n, k, new List<int>());
         }
         private static void GenerateTask2(int n, int k, List<int> list) {
             if (k == 0) {
-                Console.WriteLine($"({string.Join(",", list)})");
+                Output.Subset(list);
             } else {
                 foreach (var index in Enumerable.Range(1, n)) {
                     GenerateTask2(n, k - 1, new List<int>(list) { index });
@@ -61,35 +61,25 @@ namespace AlgorytmyKombinatoryczne {
             }
         }
 
-        public static void Task3() {
+        public static void Task3(int n, List<int> list) {
             /*
             3.Napisz program obliczający pozycję podzbioru T ⊂ {1, . . . , n} w uporządkowaniu leksykograficznym
             (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n}
             */
-            int n = int.Parse(Console.ReadLine());
-            List<int> list = Array.ConvertAll(
-                Console.ReadLine().Replace(',', ' ').Split(' ').Where(y => y.Count() > 0).ToArray(),
-                s => int.Parse(s)).ToList();
             list.Sort();
 
-
             int r = 0;
-            if (list != null) {
-                foreach (var item in list) {
-                    r += (int) Math.Pow(2, n - item);
-                }
+            foreach (var item in list) {
+                r += (int) Math.Pow(2, n - item);
             }
-
-            Console.WriteLine(r);
+            Output.Value(r);
         }
 
-        public static void Task4() {
+        public static void Task4(int n, int r) {
             /*
             4.Napisz program wyznaczający podzbiór T o zadanej pozycji r w uporządkowaniu leksykograficznym
             (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n}.
             */
-            int n = int.Parse(Console.ReadLine());
-            int r = int.Parse(Console.ReadLine());
             var tmp = new List<int>();
             var result = new List<int>();
 
@@ -106,7 +96,7 @@ namespace AlgorytmyKombinatoryczne {
             }
 
             result.Reverse();
-            Console.WriteLine($"({string.Join(",", result)})");
+            Output.Subset(result);
 
         }
     }

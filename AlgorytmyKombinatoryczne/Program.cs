@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +12,14 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-
-            Cwiczenie2.Task1();
-            //Cwiczenie2.Task2();
-            //Cwiczenie2.Task3();
-            //Cwiczenie2.Task4();
+            
+            Cwiczenie3.Task1(Input.Value());
+            //Cwiczenie3.Task2(Input.Value(), Input.Values());
+            //Cwiczenie3.Task2(Input.Value(), Input.Values());
 
             Console.ReadKey();
         }
+       
     }
+    
 }
