@@ -71,10 +71,10 @@ namespace AlgorytmyKombinatoryczne {
            */
             List<int> result = new List<int>(n);
 
-            List<int> binary1 = ToBinary(r);
+            List<int> binary1 = Utils.ToBinary(r);
             ResizeList(binary1, n);
 
-            List<int> binary2 = ToBinary(r / 2);
+            List<int> binary2 = Utils.ToBinary(r / 2);
             ResizeList(binary2, n);
 
             for (int i = 0 ; i < n ; i++) {
@@ -95,15 +95,7 @@ namespace AlgorytmyKombinatoryczne {
 
         }
 
-        public static List<int> ToBinary(int n) {
-            var tmp = new List<int>();
-            while (n != 0) {
-                tmp.Add(n & 1);
-                n = n >> 1;
-            }
-            tmp.Reverse();
-            return tmp;
-        }
+      
 
 
     }

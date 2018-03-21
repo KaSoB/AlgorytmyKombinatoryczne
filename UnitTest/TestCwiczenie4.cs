@@ -4,17 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest {
     [TestClass]
-    public class TestCwiczenie3 {
+    public class TestCwiczenie4 {
         [TestMethod]
         public void TestTask1() {
-        
-            // USELESS
-            
-            
-            
-            
-            
-            // Arrange 
+            // Arrange
             // Act 
             // Assert 
         }

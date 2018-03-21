@@ -12,14 +12,12 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-            
-            Cwiczenie3.Task1(Input.Value());
-            //Cwiczenie3.Task2(Input.Value(), Input.Values());
-            //Cwiczenie3.Task2(Input.Value(), Input.Values());
-
+            Cwiczenie4.Task1(Input.Values(), Input.Value(), Input.Value());
+            //Cwiczenie4.Task2(Input.Values(), Input.Value(), Input.Value());
+           // Cwiczenie4.Task3(5,3,7);
             Console.ReadKey();
         }
-       
+
     }
-    
+
 }
