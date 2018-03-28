@@ -7,7 +7,7 @@ namespace UnitTest {
     [TestClass]
     public class TestCwiczenie5 {
         [TestMethod]
-        public void TestTask1_0() {
+        public void Test5Task1_0() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task1(
@@ -17,7 +17,7 @@ namespace UnitTest {
             CollectionAssert.AreEqual(expected, result);
         }
         [TestMethod]
-        public void TestTask1_1() {
+        public void Test5Task1_1() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task1(new System.Collections.Generic.List<int>() { 7, 6, 5, 4, 3 }, 7, 5);
@@ -26,7 +26,7 @@ namespace UnitTest {
             Assert.IsNull(result);
         }
         [TestMethod]
-        public void TestTask1_2() {
+        public void Test5Task1_2() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task1(new System.Collections.Generic.List<int>() {5,4,3,2,1}, 7, 5);
@@ -37,7 +37,7 @@ namespace UnitTest {
 
 
         [TestMethod]
-        public void TestTask2_0() {
+        public void Test5Task2_0() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 4,2, 1 }, 5, 3);
@@ -47,7 +47,7 @@ namespace UnitTest {
         }
 
         [TestMethod]
-        public void TestTask2_1() {
+        public void Test5Task2_1() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 5, 4, 1 }, 5, 3);
@@ -57,7 +57,7 @@ namespace UnitTest {
         }
 
         [TestMethod]
-        public void TestTask2_2() {
+        public void Test5Task2_2() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 5, 4, 3 }, 5, 3);
@@ -67,7 +67,7 @@ namespace UnitTest {
         }
 
         [TestMethod]
-        public void TestTask2_3() {
+        public void Test5Task2_3() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 5, 3, 2 }, 5, 3);
@@ -77,7 +77,7 @@ namespace UnitTest {
         }
 
         [TestMethod]
-        public void TestTask2_4() {
+        public void Test5Task2_4() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 5, 4, 3,2,1 }, 7, 5);
@@ -86,7 +86,7 @@ namespace UnitTest {
             Assert.AreEqual(expected, result);
         }
         [TestMethod]
-        public void TestTask2_5() {
+        public void Test5Task2_5() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 8,6,4,2}, 8, 4);
@@ -95,7 +95,7 @@ namespace UnitTest {
             Assert.AreEqual(expected, result);
         }
         [TestMethod]
-        public void TestTask2_6() {
+        public void Test5Task2_6() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task2(new System.Collections.Generic.List<int>() { 6,5,4,3,1 }, 7, 5);
@@ -104,7 +104,7 @@ namespace UnitTest {
             Assert.AreEqual(expected, result);
         }
         [TestMethod]
-        public void TestTask3_0() {
+        public void Test5Task3_0() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task3(5,3,2);
@@ -113,7 +113,7 @@ namespace UnitTest {
             CollectionAssert.AreEqual(expected, result);
         }
         [TestMethod]
-        public void TestTask3_1() {
+        public void Test5Task3_1() {
             // Arrange
             // Act 
             var result = Cwiczenie5.Task3(6,4,8);
