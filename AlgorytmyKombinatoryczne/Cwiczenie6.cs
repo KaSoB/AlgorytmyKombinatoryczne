@@ -20,15 +20,16 @@ namespace AlgorytmyKombinatoryczne {
                 return new List<List<int>>();
             } else if (n == k || n == 1) {  // 1 elementowa lista z elementami od 1 do k
                 return new List<List<int>>() { Enumerable.Range(1, k).ToList() };
-            } else if (k == 1) { 
+            } else if (k == 1) {
                 var list = new List<List<int>>();
-                for (int i = n ; i >= 1 ; i--) {
+                for (int i = 1 ; i <= n ; i++) {
                     list.Add(new List<int>() { i });
                 }
                 return list;
             } else {
                 var p1 = GenerateTask1(n - 1, k - 1);
                 p1.ForEach(y => y.Add(n));
+                p1.Reverse();
                 var p2 = GenerateTask1(n - 1, k);
                 p2.AddRange(p1);
                 return p2;
