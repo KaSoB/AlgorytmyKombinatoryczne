@@ -6,35 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTest {
     [TestClass]
     public class TestCwiczenie6 {
-        [TestMethod]
-        public void Test6Task1_0() {
-            // Arrange
-            // Act 
-            var result = Cwiczenie5.Task1(
-                new List<int>() { 7, 6, 4, 3, 2 }, 7, 5);
-            var expected = new List<int>() { 7, 6, 5, 2, 1 };
-            // Assert 
-            CollectionAssert.AreEqual(expected, result);
-        }
-        [TestMethod]
-        public void Test6Task1_1() {
-            // Arrange
-            // Act 
-            var result = Cwiczenie5.Task1(new List<int>() { 7, 6, 5, 4, 3 }, 7, 5);
-
-            // Assert 
-            Assert.IsNull(result);
-        }
-        [TestMethod]
-        public void Test6Task1_2() {
-            // Arrange
-            // Act 
-            var result = Cwiczenie5.Task1(new List<int>() { 5, 4, 3, 2, 1 }, 7, 5);
-            var expected = new List<int>() { 6, 4, 3, 2, 1 };
-            // Assert 
-            CollectionAssert.AreEqual(expected, result);
-        }
-
+      
 
         [TestMethod]
         public void Test6Task2_0() {

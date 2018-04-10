@@ -16,8 +16,8 @@ namespace AlgorytmyKombinatoryczne {
             }
         }
         private static List<List<int>> GenerateTask1(int n, int k) {
-            if (k == 0) {  // Pusty zbiór
-                return new List<List<int>>();
+            if (k == 0) {  // Pusty zbiór  
+                return new List<List<int>>();// TODO: element 
             } else if (n == k || n == 1) {  // 1 elementowa lista z elementami od 1 do k
                 return new List<List<int>>() { Enumerable.Range(1, k).ToList() };
             } else if (k == 1) {

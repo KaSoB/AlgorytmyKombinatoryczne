@@ -36,6 +36,18 @@ namespace AlgorytmyKombinatoryczne {
             return FallingPower(n, k) / Factorial(k);
         }
 
+        public static List<int> Copy(this List<int> vs) {
+            var list = new List<int>();
+            list.AddRange(vs);
+            return list;
+        }
+        public static List<List<int>> Repeat(this List<int> vs, int n) {
+            var list = new List<List<int>>();
+            for (int i = 0 ; i < n ; i++) {
+                list.Add(Copy(vs));
+            }
+            return list;
+        }
 
     }
 
