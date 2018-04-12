@@ -5,12 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Cwiczenie5 {
+    public class Lesson5 {
+        /// <summary>
+        /// Napisz program wyznaczający następnik k-elementowego podzbioru T zbioru {1, . . . , n}
+        /// w uporządkowaniu antyleksykograficznym podzbiorów k-elementowych.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
         public static List<int> Task1(List<int> list, int n, int k) {
-            /*
-            1. Napisz program wyznaczający następnik k-elementowego podzbioru T zbioru {1, . . . , n}
-            w uporządkowaniu antyleksykograficznym podzbiorów k-elementowych.
-            */
             list.Insert(0, n + 1); // wartownik
 
             int i = k - 1;
@@ -34,29 +38,33 @@ namespace AlgorytmyKombinatoryczne {
             Output.Subset(list);
             return list;
         }
-
+        /// <summary>
+        /// Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n} w uporządkowaniu
+        /// antyleksykograficznym podzbiorów k-elementowych.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
         public static int Task2(List<int> list, int n, int k) {
-            /*
-            2. Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n} w uporządkowaniu
-            antyleksykograficznym podzbiorów k-elementowych.
-            */
-
             int rank = 0;
             for (int i = 1 ; i <= k ; i++) {
                 rank += (int) Utils.BinomialCoeff(list[i - 1] - 1, k + 1 - i);
 
             }
-
-
             Output.Value(rank);
             return rank;
         }
 
+        /// <summary>
+        /// Napisz program wyznaczający podzbiór T o randze r w uporządkowaniu antyleksykograficznym
+        ///k-elementowych podzbiorów zbioru {1, . . . , n}.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
+        /// <param name="r"></param>
+        /// <returns></returns>
         public static List<int> Task3(int n, int k, int r) {
-            /*
-            3. Napisz program wyznaczający podzbiór T o randze r w uporządkowaniu antyleksykograficznym
-            k-elementowych podzbiorów zbioru {1, . . . , n}.
-           */
             List<int> result = Enumerable.Range(1, k).ToList();
             result.Reverse();
 

@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Cwiczenie2 {
+    public class Lesson2 {
+        /// <summary>
+        /// 1.Napisz program generujący wszystkie podzbiory zbioru {1, 2, . . . , n} w kolejności zgodnej
+        /// z ich liczebnością(najpierw zbiór pusty, potem zbiory 1-elementowe, następnie 2-elementowe
+        /// itd.). Algorytm nie musi być efektywny! Wykorzystaj program z zadania 4 z poprzednich
+        ///  ćwiczeń.
+        /// </summary>
+        /// <param name="n"></param>
         public static void Task1(int n) {
-            /*
-            1.Napisz program generujący wszystkie podzbiory zbioru {1, 2, . . . , n} w kolejności zgodnej
-            z ich liczebnością (najpierw zbiór pusty, potem zbiory 1-elementowe, następnie 2-elementowe
-            itd.). Algorytm nie musi być efektywny! Wykorzystaj program z zadania 4 z poprzednich
-            ćwiczeń.
-            */
-
             foreach (var item in GenerateSubsets(n).OrderBy(y => y.Count())) {
                 Output.Subset(item);
             }
@@ -44,11 +44,13 @@ namespace AlgorytmyKombinatoryczne {
             } while (i >= 0);
             return results;
         }
+        /// <summary>
+        /// Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości k zbudowane
+        /// z liczb od 1 do n.Użyj algorytmu rekurencyjnego
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
         public static void Task2(int n, int k) {
-            /*
-            2.Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości k zbudowane
-            z liczb od 1 do n. Użyj algorytmu rekurencyjnego
-            */
             GenerateTask2(n, k, new List<int>());
         }
         private static void GenerateTask2(int n, int k, List<int> list) {
@@ -60,12 +62,13 @@ namespace AlgorytmyKombinatoryczne {
                 }
             }
         }
-
+        /// <summary>
+        /// Napisz program obliczający pozycję podzbioru T ⊂ {1, . . . , n} w uporządkowaniu leksykograficznym
+        /// (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n }
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="list"></param>
         public static void Task3(int n, List<int> list) {
-            /*
-            3.Napisz program obliczający pozycję podzbioru T ⊂ {1, . . . , n} w uporządkowaniu leksykograficznym
-            (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n}
-            */
             list.Sort();
 
             int r = 0;
@@ -74,12 +77,13 @@ namespace AlgorytmyKombinatoryczne {
             }
             Output.Value(r);
         }
-
+        /// <summary>
+        /// Napisz program wyznaczający podzbiór T o zadanej pozycji r w uporządkowaniu leksykograficznym
+        /// (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n }.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="r"></param>
         public static void Task4(int n, int r) {
-            /*
-            4.Napisz program wyznaczający podzbiór T o zadanej pozycji r w uporządkowaniu leksykograficznym
-            (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n}.
-            */
             var tmp = new List<int>();
             var result = new List<int>();
 
@@ -97,7 +101,6 @@ namespace AlgorytmyKombinatoryczne {
 
             result.Reverse();
             Output.Subset(result);
-
         }
     }
 }

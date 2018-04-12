@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Cwiczenie6 {
+    public class Lesson6 {
+        /// <summary>
+        /// Napisz program generujący wszystkie k-elementowe podzbiory zbioru {1, . . . , n} w porządku
+        /// minimalnych zmian(revolving door).
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
         public static void Task1(int n, int k) {
-            /*
-            1.Napisz program generujący wszystkie k-elementowe podzbiory zbioru {1, . . . , n} w porządku
-            minimalnych zmian (revolving door).
-            */
             foreach (var item in GenerateTask1(n, k)) {
                 Output.Subset(item);
             }
@@ -35,24 +37,30 @@ namespace AlgorytmyKombinatoryczne {
                 return p2;
             }
         }
+        /// <summary>
+        /// Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n} w porządku
+        /// minimalnych zmian podzbiorów k-elementowych.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
         public static int Task2(List<int> list, int n, int k) {
-            /*
-            2.Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n} w porządku
-                minimalnych zmian podzbiorów k-elementowych.
-            */
-
             int rank = 0;
             for (int i = 1 ; i <= k ; i++) {
                 rank += (int) (Math.Pow(-1, k - i) * (Utils.BinomialCoeff(list[i - 1], i) - 1));
             }
             return rank;
         }
-
+        /// <summary>
+        /// Napisz program wyznaczający podzbiór T o randze r w porządku minimalnych zmian k-elementowych
+        /// podzbiorów zbioru {1, . . . , n }.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
+        /// <param name="r"></param>
+        /// <returns></returns>
         public static List<int> Task3(int n, int k, int r) {
-            /*
-            3. Napisz program wyznaczający podzbiór T o randze r w porządku minimalnych zmian k-elementowych
-                podzbiorów zbioru {1, . . . , n}.
-           */
             List<int> result = new int[k].ToList();
 
             int x = n;

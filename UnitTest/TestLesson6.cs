@@ -5,14 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest {
     [TestClass]
-    public class TestCwiczenie6 {
-      
-
+    public class TestLesson6 {
         [TestMethod]
         public void Test6Task2_0() {
             // Arrange
             // Act 
-            var result = Cwiczenie6.Task2(new List<int>() { 1, 2, 5 }, 5, 3);
+            var result = Lesson6.Task2(new List<int>() { 1, 2, 5 }, 5, 3);
             var expected = 9;
             // Assert 
             Assert.AreEqual(expected, result);
@@ -22,7 +20,7 @@ namespace UnitTest {
         public void Test6Task2_1() {
             // Arrange
             // Act 
-            var result = Cwiczenie6.Task2(new List<int>() { 1, 2, 3 }, 5, 3);
+            var result = Lesson6.Task2(new List<int>() { 1, 2, 3 }, 5, 3);
             var expected = 0;
             // Assert 
             Assert.AreEqual(expected, result);
@@ -32,7 +30,7 @@ namespace UnitTest {
         public void Test6Task2_2() {
             // Arrange
             // Act 
-            var result = Cwiczenie6.Task2(new List<int>() { 3, 4, 5 }, 5, 3);
+            var result = Lesson6.Task2(new List<int>() { 3, 4, 5 }, 5, 3);
             var expected = 6;
             // Assert 
             Assert.AreEqual(expected, result);
@@ -42,7 +40,7 @@ namespace UnitTest {
         public void Test6Task2_3() {
             // Arrange
             // Act 
-            var result = Cwiczenie6.Task2(new List<int>() { 1, 2, 3, 4 }, 5, 4);
+            var result = Lesson6.Task2(new List<int>() { 1, 2, 3, 4 }, 5, 4);
             var expected = 0;
             // Assert 
             Assert.AreEqual(expected, result);
@@ -52,7 +50,7 @@ namespace UnitTest {
         public void Test6Task2_4() {
             // Arrange
             // Act 
-            var result = Cwiczenie6.Task2(new List<int>() { 1, 2, 3, 5 }, 5, 4);
+            var result = Lesson6.Task2(new List<int>() { 1, 2, 3, 5 }, 5, 4);
             var expected = 4;
             // Assert 
             Assert.AreEqual(expected, result);
@@ -67,8 +65,8 @@ namespace UnitTest {
             int k = 3;
             int r = 2;
             // Act 
-            var result = Cwiczenie5.Task3(n, k, r);
-            var expected = Cwiczenie5.Task2(result, n, k);
+            var result = Lesson5.Task3(n, k, r);
+            var expected = Lesson5.Task2(result, n, k);
             // Assert 
             Assert.AreEqual(expected, r);
         }
@@ -79,8 +77,8 @@ namespace UnitTest {
             int k = 3;
             int r = 6;
             // Act 
-            var result = Cwiczenie5.Task3(n, k, r);
-            var expected = Cwiczenie5.Task2(result, n, k);
+            var result = Lesson5.Task3(n, k, r);
+            var expected = Lesson5.Task2(result, n, k);
             // Assert 
             Assert.AreEqual(expected, r);
         }
@@ -91,8 +89,8 @@ namespace UnitTest {
             int k = 4;
             int r = 4;
             // Act 
-            var result = Cwiczenie5.Task3(n, k, r);
-            var expected = Cwiczenie5.Task2(result, n, k);
+            var result = Lesson5.Task3(n, k, r);
+            var expected = Lesson5.Task2(result, n, k);
             // Assert 
             Assert.AreEqual(expected, r);
         }
@@ -103,8 +101,8 @@ namespace UnitTest {
             int k = 4;
             int r = 0;
             // Act 
-            var result = Cwiczenie5.Task3(n, k, r);
-            var expected = Cwiczenie5.Task2(result, n, k);
+            var result = Lesson5.Task3(n, k, r);
+            var expected = Lesson5.Task2(result, n, k);
             // Assert 
             Assert.AreEqual(expected, r);
         }

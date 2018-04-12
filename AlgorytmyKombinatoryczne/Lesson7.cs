@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Cwiczenie7 {
+    public class Lesson7 {
+        /// <summary>
+        /// Napisz program generujący następnik permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static List<int> Task1(List<int> list, int n) {
-            /*
-            1. Napisz program generujący następnik permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
-            */
             list.Insert(0, 0); // wartownik!
             int index = list.Count - 2;
 
@@ -27,10 +30,13 @@ namespace AlgorytmyKombinatoryczne {
             list.RemoveAt(0); // usuwam wartownika!
             return list;
         }
+        /// <summary>
+        ///  Napisz program obliczający rangę permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static int Task2(List<int> list, int n) {
-            /*
-            2. Napisz program obliczający rangę permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
-            */
             int r = 0;
             int firstItem;
             while (list.Any()) {
@@ -46,11 +52,13 @@ namespace AlgorytmyKombinatoryczne {
 
             return r;
         }
+        /// <summary>
+        /// Napisz program wyznaczający permutację p zbioru {1, . . . , n} o randze r w porządku leksykograficznym.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="r"></param>
+        /// <returns></returns>
         public static List<int> Task3(int n, int r) {
-            /*
-            3. Napisz program wyznaczający permutację p zbioru {1, . . . , n} o randze r w porządku leksykograficznym.
-            */
-
             var dList = new List<int>();
             for (int i = 1 ; i < n ; i++) {
                 var p = (r % Utils.Factorial(i + 1)) / Utils.Factorial(i);
@@ -71,10 +79,11 @@ namespace AlgorytmyKombinatoryczne {
             }
             return list;
         }
+        /// <summary>
+        ///  Zaimplementuj algorytm Trottera-Johnsona generowania wszystkich permutacji zbioru {1, . . . , n} w porządku minimalnych zmian.
+        /// </summary>
+        /// <param name="n"></param>
         public static void Task4(int n) {
-            /*
-            4. Zaimplementuj algorytm Trottera-Johnsona generowania wszystkich permutacji zbioru {1, . . . , n} w porządku minimalnych zmian.
-            */
             GenerateTask4(n).ForEach(it => Output.Subset(it));
         }
 
@@ -86,15 +95,15 @@ namespace AlgorytmyKombinatoryczne {
             } else {
                 var list = new List<List<int>>();
 
-                bool descending = true;
+                bool isDescending = true;
                 // Dla każdej podlisty z kroku n-1...
                 foreach (var subset in GenerateTask4(n - 1)) {
                     // Utwórz odpowiednią ilość kopii tego elementu (odpowiednią czyli n razy)
                     var item = subset.Repeat(n);
                     // Poumieszczaj do każdej z nich raz element n w podanym szyku
-                    ZigZagPush(item, n, descending);
+                    ZigZagPush(item, n, isDescending);
                     // Zmień kierunek dla następnej podlisty 
-                    descending = !descending;
+                    isDescending = !isDescending;
                     // Dodaj obliczenia do wyniku
                     list.AddRange(item);
                 }

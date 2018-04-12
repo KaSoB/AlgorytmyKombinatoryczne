@@ -23,6 +23,13 @@ namespace AlgorytmyKombinatoryczne {
                 t *= n;
             return t;
         }
+        public static void StaticResizeList(List<int> list, int size) {
+            if (list.Count() < size) {
+                list.InsertRange(0, Enumerable.Repeat(0, Math.Max(0, size - list.Count)));
+            } else if (list.Count() > size) {
+                list.RemoveRange(0, list.Count() - size);
+            }
+        }
         public static long FallingPower(long n, long p) {
             long t = 1;
             for (long i = 0 ; i < p ; i++)
@@ -35,7 +42,6 @@ namespace AlgorytmyKombinatoryczne {
             k = (k > n / 2) ? n - k : k;
             return FallingPower(n, k) / Factorial(k);
         }
-
         public static List<int> Copy(this List<int> vs) {
             var list = new List<int>();
             list.AddRange(vs);
@@ -48,15 +54,11 @@ namespace AlgorytmyKombinatoryczne {
             }
             return list;
         }
-
     }
 
     static class Output {
         public static void Subset(IEnumerable<int> values) {
             Console.WriteLine($"({string.Join(",", values)})");
-        }
-        public static void Print(Action<int[]> action) {
-            Console.WriteLine($"({string.Join(",", action)})");
         }
         public static void Value(int n) {
             Console.WriteLine(n);
@@ -69,7 +71,6 @@ namespace AlgorytmyKombinatoryczne {
             }
             return value;
         }
-
         public static List<int> Values() {
             return Array.ConvertAll(
                Console.ReadLine().Replace(',', ' ').Split(' ').Where(y => y.Count() > 0).ToArray(),
