@@ -12,7 +12,7 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-            Lesson7.Task2(Input.Values(), Input.Value());
+           //.Task2(Input.Values(), Input.Value());
 
             Console.ReadKey();
         }

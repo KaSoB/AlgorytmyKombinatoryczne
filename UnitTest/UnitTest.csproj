@@ -52,6 +52,7 @@
     <Compile Include="TestLesson5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestLesson7.cs" />
+    <Compile Include="TestLesson9.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
