@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using AlgorytmyKombinatoryczne;
+﻿using AlgorytmyKombinatoryczne;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest {
@@ -73,7 +71,7 @@ namespace UnitTest {
         public void Test9Task2_0() {
             // Arrange
             // Act 
-            var result = Lesson9.Task2(0,0);
+            var result = Lesson9.Task2(0, 0);
             var expected = 1;
             // Assert 
             Assert.AreEqual(expected, result);
@@ -110,7 +108,7 @@ namespace UnitTest {
             // Arrange
             // Act 
             var result = Lesson9.Task2(0, 9);
-            var expected = 1;
+            var expected = 0;
             // Assert 
             Assert.AreEqual(expected, result);
         }

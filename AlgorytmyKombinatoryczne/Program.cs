@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
     class Program {
@@ -12,11 +7,11 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-           //.Task2(Input.Values(), Input.Value());
+            Lesson9.Task3(Input.Value());
 
             Console.ReadKey();
         }
-      
+
     }
 
 }
