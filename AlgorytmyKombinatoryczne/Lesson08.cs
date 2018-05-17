@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson8 {
+    public class Lesson08 {
         // no task
     }
 }

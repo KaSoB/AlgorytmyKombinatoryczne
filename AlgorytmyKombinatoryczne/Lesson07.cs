@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson7 {
+    public class Lesson07 {
         /// <summary>
         /// Napisz program generujący następnik permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
         /// </summary>

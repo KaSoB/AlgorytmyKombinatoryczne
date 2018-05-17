@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson3 {
+    public class Lesson03 {
         /// <summary>
         /// 1. Napisz program generujący wszystkie podzbiory zbioru {1, . . . , n} w porządku minimalnych
         /// zmian(Graya), wykorzystując wagi Hamminga lub różnicę symetryczną zbiorów.

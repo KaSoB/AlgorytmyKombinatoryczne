@@ -1,5 +1,5 @@
 ﻿namespace AlgorytmyKombinatoryczne {
-    public class Lesson9 {
+    public class Lesson09 {
         /// <summary>
         /// Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Stirlinga
         /// drugiego rodzaju ze wzoru: S(n, k) = kS(n − 1, k) + S(n − 1, k − 1)

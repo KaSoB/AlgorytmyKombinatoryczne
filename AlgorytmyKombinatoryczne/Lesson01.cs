@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson1 {
+    public class Lesson01 {
         /// <summary>
         /// Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości k zbudowane
         /// z liczb od 1 do n(użyj algorytmu iteracyjnego)

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson4 {
+    public class Lesson04 {
         /// <summary>
         /// Napisz program wyznaczający następnik k-elementowego podzbioru T zbioru {1, . . . , n}
         /// w uporządkowaniu leksykograficznym podzbiorów k-elementowych.

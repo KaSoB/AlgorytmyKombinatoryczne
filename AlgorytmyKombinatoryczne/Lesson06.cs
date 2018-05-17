@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson6 {
+    public class Lesson06 {
         /// <summary>
         /// Napisz program generujący wszystkie k-elementowe podzbiory zbioru {1, . . . , n} w porządku
         /// minimalnych zmian(revolving door).

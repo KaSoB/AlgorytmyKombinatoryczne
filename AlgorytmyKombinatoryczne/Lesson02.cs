@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
-    public class Lesson2 {
+    public class Lesson02 {
         /// <summary>
         /// 1.Napisz program generujący wszystkie podzbiory zbioru {1, 2, . . . , n} w kolejności zgodnej
         /// z ich liczebnością(najpierw zbiór pusty, potem zbiory 1-elementowe, następnie 2-elementowe
