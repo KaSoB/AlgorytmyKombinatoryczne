@@ -7,7 +7,7 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-            Lesson09.Task3(Input.Value());
+            Lesson10.Task3(Input.Value());
 
             Console.ReadKey();
         }
