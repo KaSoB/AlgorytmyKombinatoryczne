@@ -7,11 +7,11 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-            Lesson10.Task3(Input.Value());
+            var w = Lesson11.Task2(Input.Values(), Input.Value());
+            Output.Subset(w);
 
             Console.ReadKey();
         }
 
     }
-
 }
