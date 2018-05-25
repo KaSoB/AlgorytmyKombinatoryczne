@@ -7,8 +7,10 @@ namespace AlgorytmyKombinatoryczne {
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args) {
-            var w = Lesson11.Task2(Input.Values(), Input.Value());
-            Output.Subset(w);
+            Lesson11.Task1(Input.Value(), Input.Value());
+            //Lesson11.Task2(Input.Values(), Input.Value());
+            //Lesson11.Task3(Input.Value(), Input.Value(), Input.Value());
+            //Lesson11.Task4(Input.Value(), Input.Value());
 
             Console.ReadKey();
         }

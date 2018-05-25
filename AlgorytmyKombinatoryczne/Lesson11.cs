@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AlgorytmyKombinatoryczne {
     public class Lesson11 {
@@ -68,12 +69,12 @@ namespace AlgorytmyKombinatoryczne {
         /// <param name="n">Liczba do podziału</param>
         /// <param name="b">Max element</param>
         /// <param name="m">Ile już mamy składników</param>
-        public static void GenerateTask3(int[] a, int n, int b, int m) {
+        private static void GenerateTask3(int[] a, int n, int b, int m) {
             if (n == 0) {
-                Output.Subset(a);
+                Output.Subset(a.Take(m));
             } else {
-                for (int i = 0 ; i < Math.Min(b, n) ; i++) {
-                    a[m + 1] = i;
+                for (int i = 1 ; i <= Math.Min(b, n) ; i++) {
+                    a[m] = i;
                     GenerateTask3(a, n - i, i, m + 1);
                 }
             }
@@ -83,10 +84,25 @@ namespace AlgorytmyKombinatoryczne {
         /// <summary>
         /// Napisz program generujący wszystkie podziały liczby n na k składników. Wykorzystaj algorytmy z zadań 2 i 3.
         /// </summary>
-        public static void Task4(int n) {
+        public static void Task4(int n, int k) {
+            int[] vs = new int[n];
+            vs[0] = k;
+            GenerateTask3(vs, n - k, k, 1);
+        }
 
-
-
+        /// <param name="a">Gotowy kawałek podziału</param>
+        /// <param name="n">Liczba do podziału</param>
+        /// <param name="b">Max element</param>
+        /// <param name="m">Ile już mamy składników</param>
+        private static void GenerateTask4(int[] a, int n, int b, int m) {
+            if (n == 0) {
+                Task2(a.Take(m).ToList(), m);
+            } else {
+                for (int i = 1 ; i <= Math.Min(b, n) ; i++) {
+                    a[m] = i;
+                    GenerateTask4(a, n - i, i, m + 1);
+                }
+            }
         }
     }
 }
