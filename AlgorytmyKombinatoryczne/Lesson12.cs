@@ -1,19 +1,43 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace AlgorytmyKombinatoryczne {
     public class Lesson12 {
         /// <summary>
         /// Napisz program generujący kod Prufera dla zadanego drzewa T o n wierzchołkach
         /// </summary>
-        public static void Task1(int n, int k) {
-
+        public static double Task1(List<int> list, int n) {
+            double k = 0F;
+            for (int i = 0 ; i <= n - 3 ; i++) {
+                k += (list[i] - 1) * Math.Pow(n, n - 3 - i);
+            }
+            return k;
         }
 
         /// <summary>
         /// Napisz program wyznaczający drzewo odpowiadające zadanemu kodowi Prufera L.
         /// </summary>
-        public static void Task2(int n, int k) {
-
+        public static List<Tuple<int, int>> Task2(List<int> list, int n) {
+            List<Tuple<int, int>> vs = new List<Tuple<int, int>>();
+            int[] d = new int[n];
+            for (int i = 0 ; i <= n - 1 ; i++) {
+                d[i] = 1;
+            }
+            for (int i = 0 ; i <= n - 3 ; i++) {
+                d[list[i]] += 1;
+            }
+            list[n - 3] = 1; // n-2 pytać
+            for (int i = 0 ; i <= n - 3 ; i++) {
+                int x = n - 1;
+                while (d[x] != 1) {
+                    x -= 1;
+                }
+                int y = list[i];
+                d[x] -= 1;
+                d[y] -= 1;
+                vs.Add(new Tuple<int, int>(x, y));
+            }
+            return vs;
         }
 
         /// <summary>

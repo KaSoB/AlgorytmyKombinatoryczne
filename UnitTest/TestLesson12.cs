@@ -6,6 +6,18 @@ namespace UnitTest {
     [TestClass]
     public class TestLesson12 {
         [TestMethod]
+        public void Test12Task1_0() {
+            // Arrange
+            // Act 
+            var result = Lesson12.Task1(new List<int>() { 2, 6, 2, 6, 5 }, 7);
+            var expected = 4204F;
+            // Assert 
+            Assert.AreEqual(expected, result);
+        }
+
+
+
+        [TestMethod]
         public void Test12Task3_0() {
             // Arrange
             // Act 
