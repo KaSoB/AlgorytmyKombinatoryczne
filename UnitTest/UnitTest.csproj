@@ -54,6 +54,7 @@
     <Compile Include="TestLesson07.cs" />
     <Compile Include="TestLesson09.cs" />
     <Compile Include="TestLesson11.cs" />
+    <Compile Include="TestLesson12.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
