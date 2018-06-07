@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlgorytmyKombinatoryczne {
     static class Utils {
@@ -57,6 +55,9 @@ namespace AlgorytmyKombinatoryczne {
     }
 
     static class Output {
+        public static void Tuples(IEnumerable<Tuple<int, int>> tuples) {
+            Console.WriteLine($"({string.Join(",", tuples)})");
+        }
         public static void Subset(IEnumerable<int> values) {
             Console.WriteLine($"({string.Join(",", values)})");
         }

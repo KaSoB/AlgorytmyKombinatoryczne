@@ -61,8 +61,8 @@ namespace AlgorytmyKombinatoryczne {
         /// W powyższym pseudokodzie a1, . . . , am są już wybranymi składnikami podziału, natomiast
         /// parametr b jest górnym ograniczeniem wartości następnego generowanego składnika.
         /// </summary>
-        public static void Task3(int n, int b, int m) {
-            GenerateTask3(new int[n], n, b, m);
+        public static void Task3(int n) {
+            GenerateTask3(new int[n], n, n, 0);
         }
 
         /// <param name="a">Gotowy kawałek podziału</param>
@@ -87,7 +87,7 @@ namespace AlgorytmyKombinatoryczne {
         public static void Task4(int n, int k) {
             int[] vs = new int[n];
             vs[0] = k;
-            GenerateTask3(vs, n - k, k, 1);
+            GenerateTask4(vs, n - k, k, 1);
         }
 
         /// <param name="a">Gotowy kawałek podziału</param>
@@ -96,7 +96,7 @@ namespace AlgorytmyKombinatoryczne {
         /// <param name="m">Ile już mamy składników</param>
         private static void GenerateTask4(int[] a, int n, int b, int m) {
             if (n == 0) {
-                Task2(a.Take(m).ToList(), m);
+                Output.Subset(Task2(a.Take(m).ToList(), m));
             } else {
                 for (int i = 1 ; i <= Math.Min(b, n) ; i++) {
                     a[m] = i;
