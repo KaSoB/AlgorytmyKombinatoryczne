@@ -26,6 +26,25 @@ namespace UnitTest {
             // Assert 
             CollectionAssert.AreEqual(expected, result);
         }
+        [TestMethod]
+        public void Test12Task1_1() {
+            // Arrange
+            var input = new List<Tuple<int, int>> {
+                new Tuple<int, int>(1, 5),
+                new Tuple<int, int>(1, 3),
+                new Tuple<int, int>(1, 8),
+                new Tuple<int, int>(1, 2),
+                new Tuple<int, int>(7, 8),
+                new Tuple<int, int>(2, 4),
+                new Tuple<int, int>(4, 6)
+            };
+            // Act 
+            var result = Lesson12.Task1(input, 8);
+
+            var expected = new List<int>() { 8, 1, 4, 1, 2, 1 };
+            // Assert 
+            CollectionAssert.AreEqual(expected, result);
+        }
 
         [TestMethod]
         public void Test12Task2_0() {
@@ -40,8 +59,29 @@ namespace UnitTest {
                 new Tuple<int, int>(4, 5),
                 new Tuple<int, int>(1, 6),
                 new Tuple<int, int>(6, 8),
-                new Tuple<int, int>(8, 3),
-                new Tuple<int, int>(8, 2)
+                new Tuple<int, int>(3, 8),
+                new Tuple<int, int>(2, 8)
+            };
+            expected.Sort();
+            result.Sort();
+            // Assert 
+            CollectionAssert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void Test12Task2_1() {
+            // Arrange
+            var output = new List<int>() { 8, 1, 4, 1, 2, 1 };
+            // Act 
+            var result = Lesson12.Task2(output);
+
+            var expected = new List<Tuple<int, int>> {
+                new Tuple<int, int>(1, 5),
+                new Tuple<int, int>(1, 3),
+                new Tuple<int, int>(1, 8),
+                new Tuple<int, int>(1, 2),
+                new Tuple<int, int>(7, 8),
+                new Tuple<int, int>(2, 4),
+                new Tuple<int, int>(4, 6)
             };
             expected.Sort();
             result.Sort();

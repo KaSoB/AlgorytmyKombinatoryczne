@@ -56,7 +56,8 @@ namespace AlgorytmyKombinatoryczne {
                 var indexMin = d.Select((value, index) => new { Value = value, Index = index }).Last(it => it.Value == min).Index + 1;
                 var firstElement = list[0];
                 // dodajemy pierwszy element z listy + indeks gdzie znajduje sie wartość min
-                result.Add(new Tuple<int, int>(firstElement, indexMin));
+                // konwencja: pierwszy element mniejszy, drugi większy
+                result.Add(new Tuple<int, int>(Math.Min(firstElement, indexMin), Math.Max(firstElement, indexMin)));
                 // usuwamy ten element
                 list.RemoveAt(0);
                 // odnotowujemy to usunięcie
